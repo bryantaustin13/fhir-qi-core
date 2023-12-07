@@ -59,6 +59,8 @@ This page lists the change history for each version of QI Core.
 1. Update QI-Core QDM to QI-Core mapping section for QI-Core 6.0 ([FHIR-41570](https://jira.hl7.org/browse/FHIR-41570))
 1. Add additional notes to commenters in QI-Core 6.0 ballot ([FHIR-41574](https://jira.hl7.org/browse/FHIR-41574))
 1. Update landing page for QI-Core 6.0 ballot ([FHIR-41575](https://jira.hl7.org/browse/FHIR-41575))
+1. Provide Additional Guidance on Negation Profiles ([FHIR-42099](https://jira.hl7.org/browse/FHIR-42099))([Applied here](index.html#guidance-negation-profiles))
+   
 
 ### STU5 Release (5.0.0)
 

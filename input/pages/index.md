@@ -198,6 +198,7 @@ measures or clinical decision support.
 Because QI-Core profiles derive from US Core profiles where possible, wherever US Core defines a binding, the QI-Core
 profiles inherit that binding. QI-Core may specify additional constraints, such as requiring a binding that is only
 preferred in the US Core base profile, but in general, the QI-Core profiles use the same bindings as US Core. This means
+preferred in the US Core base profile, but divin general, the QI-Core profiles use the same bindings as US Core. This means
 that QI-Core is currently a U.S. Realm specification. To support applications outside the U.S. Realm, additional binding
 analysis and effort would be required.
 
@@ -395,31 +396,48 @@ The [QICore ObservationCancelled](StructureDefinition-qicore-observationcancelle
 Please note: some US Core hyperlinks are currently inaccessible as a result of US Core combining SDOH with Screening Assessment (previously Observation Survey)
 
 #### Guidance for the use of Negation Profiles
+{: #guidance-negation-profiles}
+<div class="new-content">
+<p>Quality Measure and Clinical Decision Support authors and implementers should be cautious to prevent a reason for not performing a single item from a value set as indication that the reason applies to all valueset members.  This may become more problematic as automated data extraction progresses and directly impacts EHR implementation.</p>
 
-<p>Quality Measure and Clinical Decision Support authors and implementers should be cautious to prevent a reason for not performing a single item from a value set as indication that the reason applies to all valueset members.  This may become more problematic as automated data extraction progresses and directly impacts EHR implementation.  Clinicians require a rapid way to document that none of the members of the negation set could be selected.  Caution is required to prevent a single member selection from being interpreted as if all valueset members were selected.</p>
+<p>The most common use case:</p>
 
-<p>This would be the most common use case. A less frequent need is to indicate that they did not do ONE of the members of the valueset. Stakeholders should understand that either a reason for not acting on a valueset or a single member from that value set meet criteria for the notDone expression.</p>
-
-<p>Response to a query for a reason will result in fulfilling the criteria that meet the not-performed extension as long as two criteria have been met:</p>
+<p>Clinicians require a rapid way to document that none of the members of the negation set could be selected.  Caution is required to prevent a single member selection from being interpreted as if all valueset members were selected. This use case requires:</p>
 
 <ol>
   <li>Presence of a concept (code) from the statusReason value set</li>
   <li>Presence of the code representing what has not occurred identified as:
     <ol>
-      <li>A direct reference code (DRC) indicating the expected activity (if the measure or CDS artifact included only a DRC)</li>
-      <li>A value set OID representing the expected activity</li>
-      <li>Any concept or code from within the expected value set</li>
+        <li>1.	A value set OID representing the expected activity (e.g., MedicationRequest.medication[x].notDoneValueSet)</li>
+        <li>A direct reference code (DRC) indicating the expected activity (if the measure or CDS artifact included only a DRC and not a value set)</li>
     </ol>
   </li>
 </ol>
 
-<p>The reason the profile indicates the .code as qicore-notDoneValueSet is to allow a clinician to indicate “I did none of these” with the respective statusReason or doNotPerformReason. Implementer feedback suggests that clinicians prefer the “none of these” approach rather than a requirement to select a single element from a list.  However, there are clinical situations in which a clinician will indicate a reason for not performing a specific activity that represents one of the members of a value set bound to a specific data element in a measure or a CDS.</p>
+<p>A less frequent use case:</p>
 
+<p>Clinicians may choose to indicate that they did not do ONE of the members of the value set. This use case requires:</p>
+
+<ol>
+  <li>Presence of a concept (code) from the statusReason value set</li>
+  <li>Presence of the code representing what has not occurred identified as:
+    <ol>
+        <li>Any concept or code from within the expected value set (e.g., MedicationRequst.medication[x].coding with binding to ValueSet)</li>
+    </ol>
+  </li>
+</ol>
+
+<p>Stakeholders should understand that either use case meets criteria for a notDone expression, i.e., there exists a concept from the statusReason value set and a “code” represents what has not occurred.</p>
+
+<p>To clarify the distinction between these two use cases, the NotDone profiles indicate the .code as qicore-notDoneValueSet, clearly indicating “I did none of these” with the respective statusReason or doNotPerformReason. Implementer feedback suggests that clinicians prefer the “none of these” approach rather than a requirement to select a single element from a list.</p>
+
+<p>To allow clinical situations in which a clinician may indicate a reason for not performing a specific activity represented by a single member of a value set bound to a specific data element in a measure or a CDS, data requests use the <i>coding</i> element of the NotDone profile (not the notDoneValueSet element).</p>
+</div>
 <p>Examples of such a scenario:</p>
 <ol>
 <li>A measure numerator criterion includes an order for angiotensin converting enzyme inhibitors (ACEI). The clinician indicates not ordering enalapril due to the patient’s intolerance (drowsiness) and, instead, orders another ACEI in the same value set, lisinopril. The order for lisinopril would fulfill criteria for the numerator regardless of meeting criteria for MedicationNotRequested.  However, if the clinician did not order another medication from the value set (e.g., lisinopril), the presence of a doNotPerformReason for the value set member enalapril fulfills the criteria for MedicationNotRequested and the patient would be excluded from the measure even though numerator criteria were not met.</li>
 <li>A measure criterion for anticoagulation uses a valueset containing warfarin or direct-oral-anticoagulant (DOAC).  Studies may support preference of DOAC due to long term outcomes, but the clinician may select a reason for not ordering DOAC due to its expense. That reason for the single item (DOAC) meets criteria for the expression and fail to recognize lack of compliance with any anticoagulation.</li>
-<li>A measure evaluating lipid management uses statin valueset containing atorvastatin. The clinician may provide a reason for not ordering atorvastatin, such as myopathy. That reason meets criteria for the expression and fails to recognize lack of compliance with any lipid therapy, but the patient might be able to tolerate ezetimibe/simvastatin.</li>
+<li>A measure evaluating lipid management uses statin value set containing atorvastatin. The clinician may provide a reason for not ordering atorvastatin, such as myopathy. That reason meets criteria for the expression and fails to recognize lack of compliance with any lipid therapy, but the patient might be able to tolerate ezetimibe/simvastatin.</li>
 </ol>
 
 <p>Artifact developers should consider these facts when evaluating data retrieved as it pertains to measure intent and value set development. Implementers should consider these facts to consider providing data capture opportunities that limit practitioner burden.</p>
