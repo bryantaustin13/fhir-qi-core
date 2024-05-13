@@ -557,13 +557,13 @@ define fluent function direct(contactPoint ContactPoint):
 /* QICore Extensions */
 
 /*
-@description: Surfaces the [isElective](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-isElective)
-modifier extension defined in QICore.
+@description: Surfaces the [isElective]("http://hl7.org/fhir/StructureDefinition/cqf-isElective",)
+modifier extension defined in fhir-extensions.
 @comment: This function returns the value of the isElective modifier extension as a boolean.
-@extension: http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-isElective
+@extension: "http://hl7.org/fhir/StructureDefinition/cqf-isElective",
 */
 define fluent function isElective(serviceRequest ServiceRequest):
-  serviceRequest.modifierExtension('http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-isElective').value as boolean
+  serviceRequest.modifierExtension('"http://hl7.org/fhir/StructureDefinition/cqf-isElective",').value as boolean
 
 /*
 @description: Surfaces the [procedure](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-procedure)

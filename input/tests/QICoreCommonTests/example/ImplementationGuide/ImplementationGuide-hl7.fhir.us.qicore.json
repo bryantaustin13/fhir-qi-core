@@ -986,7 +986,7 @@
         },
         "exampleBoolean": false
       },
-      
+
       {
         "extension": [
           {
@@ -1115,7 +1115,7 @@
         },
         "exampleBoolean": false
       },
- 
+
       {
         "extension": [
           {
@@ -1988,11 +1988,11 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-qicore-isElective.html"
+            "valueUri": "StructureDefinition-cqf-isElective.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/qicore-isElective"
+          "reference": "StructureDefinition/cqf-isElective"
         },
         "exampleBoolean": false
       },

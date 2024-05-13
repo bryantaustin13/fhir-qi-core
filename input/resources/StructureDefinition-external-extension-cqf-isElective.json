@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/StructureDefinition/cqf-isElective",
   "version": "5.0.0",
   "name": "CQFIsElective",
-  "title": "CQF IsElective",
+  "title": "CQF Is Elective",
   "status": "draft",
   "experimental": false,
   "date": "2018-08-22",

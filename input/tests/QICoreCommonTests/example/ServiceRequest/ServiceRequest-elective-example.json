@@ -7,7 +7,7 @@
   },
   "modifierExtension": [
     {
-      "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-isElective",
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-isElective",,
       "valueBoolean": true
     }
   ],
