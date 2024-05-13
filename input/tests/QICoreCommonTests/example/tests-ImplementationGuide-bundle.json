@@ -1433,10 +1433,10 @@
             "valueString": "StructureDefinition:extension"
           }, {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-qicore-encounter-diagnosisPresentOnAdmission.html"
+            "valueUri": "StructureDefinition-external-extension-cqf--encounter-diagnosisPresentOnAdmission.html"
           } ],
           "reference": {
-            "reference": "StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission"
+            "reference": "StructureDefinition/external-extension-cqf-encounter-diagnosisPresentOnAdmission"
           },
           "exampleBoolean": false
         }, {

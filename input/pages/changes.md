@@ -83,7 +83,7 @@ This page lists the change history for each version of QI-Core.
 1. Relax cardinality for specific elements to stay with US Core cardinality assignments ([FHIR-43010](https://jira.hl7.org/browse/FHIR-43010))
 1. Correct QDM Substance mapping to Observation ([FHIR-44605](https://jira.hl7.org/browse/FHIR-44605))
 1. Correct mapping for prinicpal procedure ([FHIR-44835](https://jira.hl7.org/browse/FHIR-44835))
-
+1. Update QI-Core to use extensions pack ([FHIR-44835](https://jira.hl7.org/browse/FHIR-45369))
 
 
 

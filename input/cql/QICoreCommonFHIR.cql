@@ -625,10 +625,10 @@ define fluent function notDoneValueSet(concept CodeableConcept):
   concept.extension('http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-notDoneValueSet').value as canonical
 
 /*
-@description: Surfaces the [presentOnAdmission](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission)
+@description: Surfaces the [presentOnAdmission](http://hl7.org/fhir/StructureDefinition//cqf-encounter-diagnosisPresentOnAdmission)
 extension defined in QICore.
 @comment: This function returns the value of the extension as a CodeableConcept
-@extension: http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission
+@extension: http://hl7.org/fhir/StructureDefinition//cqf-encounter-diagnosisPresentOnAdmission
 */
 define fluent function presentOnAdmission(element Element):
-  element.extension('http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission').value as CodeableConcept
+  element.extension('http://hl7.org/fhir/StructureDefinition//cqf-encounter-diagnosisPresentOnAdmission').value as CodeableConcept

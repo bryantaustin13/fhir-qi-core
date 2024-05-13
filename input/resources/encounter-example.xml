@@ -21,7 +21,7 @@
     <reference value="Patient/example"/>
   </subject>
   <diagnosis>
-    <extension url="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission">
+    <extension url="http://hl7.org/fhir/StructureDefinition/cqf-encounter-diagnosisPresentOnAdmission">
       <valueCodeableConcept>
         <coding>
           <system value="https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding"/>

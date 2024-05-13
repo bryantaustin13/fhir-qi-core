@@ -112,7 +112,7 @@
       },
       "diagnosis": [ {
         "extension": [ {
-          "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission",
+          "url": "http://hl7.org/fhir/StructureDefinition//cqf-encounter-diagnosisPresentOnAdmission",
           "valueCodeableConcept": {
             "coding": [ {
               "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission",
