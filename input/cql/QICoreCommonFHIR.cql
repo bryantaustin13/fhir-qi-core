@@ -580,14 +580,16 @@ define fluent function procedure(encounter Encounter):
     }
 
 /*
-@description: Surfaces the [doNotPerform](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-doNotPerformReason)
+@description: Surfaces the [doNotPerform](http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason)
 extension defined in QICore.
 @comment: This function returns the value of the extension as a CodeableConcept
-@extension: http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-doNotPerformReason
-*/
-define fluent function doNotPerformReason(requestResource DomainResource):
-  requestResource.extension('http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-doNotPerformReason').value as CodeableConcept
+@extension: http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason
 
+Removed as it is not used
+
+define fluent function doNotPerformReason(requestResource DomainResource):
+  requestResource.extension('http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason').value as CodeableConcept
+*/
 /*
 @description: Surfaces the [recorded](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded)
 extension defined in QICore.

@@ -75,6 +75,14 @@
   <definition>
     <resource>
       <reference>
+        <reference value="StructureDefinition/external-extension-cqf-doNotPerformReason"/>
+      </reference>
+      <name value="StructureDefinition Do Not Perform Reason"/>
+      <description value="Indicates the reason the event was not performed."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="AdverseEvent/example"/>
       </reference>
       <name value="AdverseEvent example"/>
@@ -898,7 +906,10 @@
     <generation value="markdown"/>
   </page>
 </page>
-
+<parameter>
+  <code value="special-url"/>
+  <value value="http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason"/>
+</parameter>
 <parameter>
   <code value="releaselabel"/>
   <value value="STU6"/>

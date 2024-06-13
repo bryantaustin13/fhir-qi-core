@@ -1,25 +1,23 @@
-
 {
   "resourceType" : "StructureDefinition",
-  "id" : "qicore-doNotPerformReason",
+  "id" : "external-extension-cqf-doNotPerformReason",
   "text" : {
     "status" : "extensions"
   },
-  "url" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-doNotPerformReason",
+  "url" : "http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason",
   "version" : "5.0.0",
-  "name" : "QICoreDoNotPerformReason",
-  "title": "QICore Do Not Perform Reason",
+  "name" : "CQFDoNotPerformReason",
+  "title": "CQF Do Not Perform Reason",
   "status" : "active",
   "experimental" : false,
-  "date" : "2018-08-22",
-  "publisher" : "http://www.hl7.org/Special/committees/cqi/index.cfm",
-  "contact" : [
+  "date" : "2024-05-20",
+  "publisher": "Clinical Quality Information WG",
+  "contact": [
     {
-      "name" : "Clinical Quality Information WG",
-      "telecom" : [
+      "telecom": [
         {
-          "system" : "url",
-          "value" : "http://www.hl7.org/Special/committees/cqi"
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi/index.cfm"
         }
       ]
     }
@@ -206,7 +204,7 @@
             "code" : "uri"
           }
         ],
-        "fixedUri" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-doNotPerformReason",
+        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason",
         "isModifier" : false,
         "isSummary" : false,
         "mapping" : [
@@ -276,7 +274,7 @@
             "code" : "uri"
           }
         ],
-        "fixedUri" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-doNotPerformReason"
+        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason"
       },
       {
         "id" : "Extension.value[x]",

@@ -160,7 +160,7 @@
 <artifact deprecated="true" id="CodeSystem/diagnosticorder-precondition" key="CodeSystem-diagnosticorder-precondition" name="QICore Diagnostic Order Precondition"/>
 <artifact id="StructureDefinition/qicore-diagnosticreport-lab" key="DiagnosticReportLab" name="QICore DiagnosticReport Profile for Laboratory Results Reporting"/>
 <artifact id="StructureDefinition/qicore-diagnosticreport-note" key="DiagnosticReportNote" name="QICore DiagnosticReport Profile for Report and Note Exchange"/>
-<artifact id="StructureDefinition/qicore-doNotPerformReason" key="StructureDefinition-qicore-doNotPerformReason" name="QICore Do Not Perform Reason"/>
+<artifact deprecated="true" id="StructureDefinition/qicore-doNotPerformReason" key="StructureDefinition-qicore-doNotPerformReason" name="QICore Do Not Perform Reason"/>
 <artifact deprecated="true" id="Library/QICoreElements" key="Library-QICoreElements" name="QICore Elements"/>
 <artifact id="StructureDefinition/qicore-encounter" key="Encounter" name="QICore Encounter"/>
 <artifact deprecated="true" id="ValueSet/qicore-encounter-discharge-disposition" key="ValueSet-qicore-encounter-discharge-disposition" name="QICore Encounter Clinical Discharge Disposition Codes"/>
@@ -245,6 +245,7 @@
 <artifact deprecated="true" id="ServiceRequest/referral-example" key="ServiceRequest-referral-example" name="ServiceRequest referral example"/>
 <artifact deprecated="true" id="Specimen/example" key="Specimen-example" name="Specimen example"/>
 <artifact deprecated="true" key="StructureDefinition" name="StructureDefinition"/>
+<artifact id="StructureDefinition/external-extension-cqf-doNotPerformReason" key="StructureDefinition-external-extension-cqf-doNotPerformReason" name="StructureDefinition Do Not Perform Reason"/>
 <artifact id="Substance/example" key="Substance-example" name="Substance example"/>
 <artifact id="Task/example" key="Task-example" name="Task example"/>
 <artifact id="Task/negation-with-code-example" key="Task-negation-with-code-example" name="TaskRejected with code example"/>
