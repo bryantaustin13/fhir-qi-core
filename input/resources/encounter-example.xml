@@ -20,8 +20,16 @@
   <subject>
     <reference value="Patient/example"/>
   </subject>
-  <diagnosis>
-    <extension url="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission">
+  <reasonCode>
+    <extension url="">
+      <valueCodeableConcept>
+          <coding>
+              <system value=""/>
+              <code value=""/>
+          </coding>
+      </valueCodeableConcept>
+    </extension>
+    <!-- extension url="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission">
       <valueCodeableConcept>
         <coding>
           <system value="https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding"/>
@@ -29,8 +37,5 @@
         </coding>
       </valueCodeableConcept>
     </extension>
-    <condition>
-      <reference value="Condition/appendicitis-example"/>
-    </condition>
-  </diagnosis>
+  </reasonCode>
 </Encounter>

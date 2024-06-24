@@ -401,7 +401,7 @@ define ProcedureNotDone:
 /*
 define "No VTE Prophylaxis Device Applied":
   ["Procedure": "Device Application"] DeviceApplied
-    let DeviceNotDoneTiming: Global.GetExtension(DeviceApplied, 'qicore-recorded').value
+    let DeviceNotDoneTiming: Global.GetExtension(DeviceApplied, cqf-recorded').value
     where (DeviceApplied.usedCode in "Intermittent pneumatic compression devices (IPC)"
       or DeviceApplied.usedCode in "Venous foot pumps (VFP)"
       or DeviceApplied.usedCode in "Graduated compression stockings (GCS)"

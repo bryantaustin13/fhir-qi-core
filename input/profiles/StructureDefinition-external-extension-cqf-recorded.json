@@ -1,13 +1,16 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "qicore-encounter-diagnosisPresentOnAdmission",
-  "url" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission",
+  "id" : "external-extension-cqf-recorded",
+  "text" : {
+    "status" : "extensions"
+  },
+  "url" : "http://hl7.org/fhir/StructureDefinition/cqf-recorded",
   "version" : "5.0.0",
-  "name" : "QICoreDiagnosisPresentOnAdmission",
-  "title" : "QICore Diagnosis Present on Admission",
-  "status" : "draft",
+  "name" : "CQFNotDoneRecorded",
+  "title" : "CQF Not Done Recorded",
+  "status" : "active",
   "experimental" : false,
-  "date" : "2018-08-22T00:00:00-06:00",
+  "date" : "2018-08-22",
   "publisher" : "http://www.hl7.org/Special/committees/cqi/index.cfm",
   "contact" : [
     {
@@ -20,7 +23,7 @@
       ]
     }
   ],
-  "description" : "Indicator of whether the Encounter diagnosis was present at the time of admission.",
+  "description" : "Captures the recorded date of the event.",
   "jurisdiction" : [
     {
       "coding" : [
@@ -44,7 +47,7 @@
   "context" : [
     {
       "type" : "element",
-      "expression" : "Encounter.diagnosis"
+      "expression" : "Resource"
     }
   ],
   "type" : "Extension",
@@ -55,9 +58,8 @@
       {
         "id" : "Extension",
         "path" : "Extension",
-        "short" : "onAdmission",
-        "definition" : "Indicator of whether the Encounter diagnosis was present at the time of admission.",
-        "min" : 1,
+        "definition" : "Captures the recorded date of the event.",
+        "min" : 0,
         "max" : "1"
       },
       {
@@ -68,21 +70,16 @@
             "code" : "uri"
           }
         ],
-        "fixedUri" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission"
+        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/cqf-recorded"
       },
       {
         "id" : "Extension.value[x]",
         "path" : "Extension.value[x]",
         "type" : [
           {
-            "code" : "CodeableConcept"
+            "code" : "dateTime"
           }
-        ],
-        "binding" : {
-          "strength" : "required",
-          "description" : "Indicator of whether the Encounter diagnosis was present at the time of admission",
-          "valueSet" : "http://hl7.org/fhir/us/qicore/ValueSet/qicore-present-on-admission"
-        }
+        ]
       }
     ]
   }

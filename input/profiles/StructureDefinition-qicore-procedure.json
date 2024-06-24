@@ -57,7 +57,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded"
+              "http://hl7.org/fhir/StructureDefinition/cqf-recorded"
             ]
           }
         ]

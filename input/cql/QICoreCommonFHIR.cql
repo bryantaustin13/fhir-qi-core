@@ -561,9 +561,10 @@ define fluent function direct(contactPoint ContactPoint):
 modifier extension defined in QICore.
 @comment: This function returns the value of the isElective modifier extension as a boolean.
 @extension: http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-isElective
-*/
+
 define fluent function isElective(serviceRequest ServiceRequest):
   serviceRequest.modifierExtension('http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-isElective').value as boolean
+*/
 
 /*
 @description: Surfaces the [procedure](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-procedure)
@@ -590,13 +591,13 @@ define fluent function doNotPerformReason(requestResource DomainResource):
   requestResource.extension('http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason').value as CodeableConcept
 
 /*
-@description: Surfaces the [recorded](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded)
+@description: Surfaces the [recorded](http://hl7.org/fhir/StructureDefinition/cqf-recorded)
 extension defined in QICore.
 @comment: This function returns the value of the extension as a dateTime
-@extension: http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded
+@extension: http://hl7.org/fhir/StructureDefinition/cqf-recorded
 */
 define fluent function recorded(domainResource DomainResource):
-  domainResource.extension('http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded').value as dateTime
+  domainResource.extension('http://hl7.org/fhir/StructureDefinition/cqf-recorded').value as dateTime
 
 /*
 @description: Surfaces the [notDone](http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-notDone)

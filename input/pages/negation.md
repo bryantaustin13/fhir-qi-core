@@ -81,7 +81,7 @@ See the <a href="MedicationAdministration-negation-with-code-example.html">Medic
 
 "extension" : [{
 
-"url" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+"url" : "http://hl7.org/fhir/StructureDefinition/cqf-recorded",
 
 "valueDateTime" : "2015-01-15"
 
@@ -159,7 +159,7 @@ See the <a href="MedicationAdministration-negation-example.html">MedicationAdmin
 
 "extension" : [{
 
-"url" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+"url" : "http://hl7.org/fhir/StructureDefinition/cqf-recorded",
 
 "valueDateTime" : "2015-01-15"
 

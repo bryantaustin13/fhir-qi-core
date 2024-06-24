@@ -863,15 +863,8 @@
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ServiceRequest"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "ServiceRequest-elective-example.html"
           }
         ],
-        "reference": {
-          "reference": "ServiceRequest/elective-example"
-        },
         "exampleBoolean": true
       },
       {
@@ -986,7 +979,7 @@
         },
         "exampleBoolean": false
       },
-      
+
       {
         "extension": [
           {
@@ -1115,7 +1108,7 @@
         },
         "exampleBoolean": false
       },
- 
+
       {
         "extension": [
           {
@@ -1924,11 +1917,11 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-qicore-doNotPerformReason.html"
+            "valueUri": "StructureDefinition-cqf-doNotPerformReason.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/qicore-doNotPerformReason"
+          "reference": "StructureDefinition/cqf-doNotPerformReason"
         },
         "exampleBoolean": false
       },
@@ -1985,15 +1978,8 @@
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:extension"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-qicore-isElective.html"
           }
         ],
-        "reference": {
-          "reference": "StructureDefinition/qicore-isElective"
-        },
         "exampleBoolean": false
       },
       {
@@ -2004,11 +1990,11 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-qicore-recorded.html"
+            "valueUri": "StructureDefinition-cqf-recorded.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/qicore-recorded"
+          "reference": "StructureDefinition/cqf-recorded"
         },
         "exampleBoolean": false
       },

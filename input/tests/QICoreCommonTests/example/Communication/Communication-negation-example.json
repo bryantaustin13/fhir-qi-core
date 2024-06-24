@@ -7,7 +7,7 @@
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-recorded",
       "valueDateTime": "2014-12-12T18:01:10-08:00"
     }
   ],

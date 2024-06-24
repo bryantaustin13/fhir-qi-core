@@ -83,6 +83,22 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/external-extension-cqf-notDoneReason"/>
+      </reference>
+      <name value="StructureDefinition Not Done Reason"/>
+      <description value="Indicates the reason the event was not done."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/external-extension-cqf-recorded"/>
+      </reference>
+      <name value="CQF Not Done Recorded"/>
+      <description value="Captures the recorded date the event was not done."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="AdverseEvent/example"/>
       </reference>
       <name value="AdverseEvent example"/>
@@ -771,14 +787,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ServiceRequest/elective-example"/>
-      </reference>
-      <name value="ServiceRequest elective example"/>
-      <description value="Elective procedure ServiceRequest example"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="RelatedPerson/example"/>
       </reference>
       <name value="RelatedPerson example"/>
@@ -910,6 +918,14 @@
   <code value="special-url"/>
   <value value="http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason"/>
 </parameter>
+<parameter>
+  <code value="special-url"/>
+  <value value="http://hl7.org/fhir/StructureDefinition/cqf-notDoneReason"/>
+</parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://hl7.org/fhir/StructureDefinition/cqf-notRecorded"/>
+    </parameter>
 <parameter>
   <code value="releaselabel"/>
   <value value="STU6"/>
