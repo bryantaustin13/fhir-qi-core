@@ -20,22 +20,11 @@
   <subject>
     <reference value="Patient/example"/>
   </subject>
-  <reasonCode>
-    <extension url="">
-      <valueCodeableConcept>
-          <coding>
-              <system value=""/>
-              <code value=""/>
-          </coding>
-      </valueCodeableConcept>
-    </extension>
-    <!-- extension url="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter-diagnosisPresentOnAdmission">
-      <valueCodeableConcept>
+    <reasonCode>
         <coding>
-          <system value="https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding"/>
-          <code value="Y"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="183966005"/>
+            <display value="Drug treatment not indicated (situation)"/>
         </coding>
-      </valueCodeableConcept>
-    </extension>
-  </reasonCode>
+    </reasonCode>
 </Encounter>
