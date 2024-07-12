@@ -83,6 +83,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/external-negation-reason-example"/>
+      </reference>
+      <name value="ValueSet Negation Reason Example"/>
+      <description value="An example value set illustrating the kinds of codes that would be expected to be used to indicate the reason an event did not occur, or a request was not performed."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/external-extension-cqf-notDoneReason"/>
       </reference>
       <name value="StructureDefinition Not Done Reason"/>
@@ -918,13 +926,17 @@
   <code value="special-url"/>
   <value value="http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason"/>
 </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://hl7.org/fhir/ValueSet/negation-reason-example"/>
+    </parameter>
 <parameter>
   <code value="special-url"/>
   <value value="http://hl7.org/fhir/StructureDefinition/cqf-notDoneReason"/>
 </parameter>
     <parameter>
       <code value="special-url"/>
-      <value value="http://hl7.org/fhir/StructureDefinition/cqf-notRecorded"/>
+      <value value="http://hl7.org/fhir/StructureDefinition/cqf-recorded"/>
     </parameter>
 <parameter>
   <code value="releaselabel"/>

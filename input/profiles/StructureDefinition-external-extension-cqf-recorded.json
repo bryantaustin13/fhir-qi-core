@@ -1,83 +1,87 @@
 {
   "resourceType" : "StructureDefinition",
   "id" : "external-extension-cqf-recorded",
-  "text" : {
-    "status" : "extensions"
-  },
-  "url" : "http://hl7.org/fhir/StructureDefinition/cqf-recorded",
-  "version" : "5.0.0",
-  "name" : "CQFNotDoneRecorded",
-  "title" : "CQF Not Done Recorded",
-  "status" : "active",
-  "experimental" : false,
-  "date" : "2018-08-22",
-  "publisher" : "http://www.hl7.org/Special/committees/cqi/index.cfm",
-  "contact" : [
+  "extension": [{
+    "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode": "cqi"
+  }],"text": {
+  "status": "extensions"
+},
+  "url": "http://hl7.org/fhir/StructureDefinition/cqf-recorded",
+  "version": "5.0.0",
+  "name": "CQFNotDoneRecorded",
+  "title": "CQF Not Done Recorded",
+  "status": "active",
+  "experimental": false,
+  "date": "2018-08-22",
+  "publisher" : "HL7 International / Clinical Quality Information",
+  "contact": [
     {
       "name" : "Clinical Quality Information WG",
-      "telecom" : [
+      "telecom": [
         {
-          "system" : "url",
+          "system": "url",
           "value" : "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
-  ],
-  "description" : "Captures the recorded date of the event.",
-  "jurisdiction" : [
+  ],  "description": "Captures the recorded date of the event.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
     {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "US"
-        }
-      ]
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
     }
   ],
-  "fhirVersion" : "4.0.1",
-  "mapping" : [
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
     {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
+      "type": "element",
+      "expression": "Communication"
+    },
+    {
+      "type": "element",
+      "expression": "MedicationAdministration"
+    },
+    {
+      "type": "element",
+      "expression": "MedicationDispense"
+    },
+    {
+      "type": "element",
+      "expression": "Procedure"
     }
   ],
-  "kind" : "complex-type",
-  "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "Resource"
-    }
-  ],
-  "type" : "Extension",
-  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation" : "constraint",
-  "differential" : {
-    "element" : [
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
       {
-        "id" : "Extension",
-        "path" : "Extension",
-        "definition" : "Captures the recorded date of the event.",
-        "min" : 0,
-        "max" : "1"
+        "id": "Extension",
+        "path": "Extension",
+        "definition": "Captures the recorded date of the event.",
+        "min": 0,
+        "max": "1"
       },
       {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "type" : [
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "type": [
           {
-            "code" : "uri"
+            "code": "uri"
           }
         ],
-        "fixedUri" : "http://hl7.org/fhir/StructureDefinition/cqf-recorded"
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/cqf-recorded"
       },
       {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "type" : [
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
           {
-            "code" : "dateTime"
+            "code": "dateTime"
           }
         ]
       }
