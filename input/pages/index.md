@@ -2,7 +2,7 @@
 
 
 {:.stu-note}
-> This STU 6.0 update to the QI-Core profiles updates to US-Core STU v6.1.0. See the version history for a complete listing of changes to this version.
+> This STU 7.0.0-ballot update to the QI-Core profiles aligns with US-Core STU v7.0.0. For a complete list of changes in this version, please refer to the version history.
 
 
 {: #qi-core-implementation-guide}
@@ -26,7 +26,9 @@ Implementation Guide.
 This guide is divided into pages which are listed at the top of each page in the menu bar:
 
 * **[Home](index.html)**: The home page provides summary and background information
-* **[Profiles](profiles.html)**: The profiles page provides a complete listing of all the profiles defined in or used by QI-Core
+* **Profiles**
+    * **[QI-Core Profiles](profiles.html)**: The profiles page provides a complete listing of all the profiles defined in or used by QI-Core
+    * **[QI Elements](qi-elements.html)**: The QI Elements page provides a complete listing of all the QI Elements in each profile used by QI-Core
 * **[QI-Core Negation](negation.html)**: The negations page describes QI-Core Negation
 * **[Patterns](patterns.html)**: The patterns page describes patterns of usage for QI-Core applications
 * **[Model Info](modelinfo.html)**: The model info page provides the QI-Core model information to support implementation
@@ -282,7 +284,7 @@ the resources in "Any" references SHALL conform to QI-Core profiles if the base 
 Conformance to this QI-Core Implementation Guide requires the following (in addition to adherence to core FHIR requirements):
 
 -  Implementations **SHALL** support all profile types in the QI-Core set (listed in the [profiles](profiles.html) page) for resources they exchange
--  Server implementations **SHALL** declare their support of the QI-Core profiles in a FHIR CapabilityStatement
+-  This IG does not define the capability statements as it does not address accessing patient level data directly via API calls; however, server implementations **SHALL** declare their support of the QI-Core profiles in a FHIR CapabilityStatement.
 -  Conformant servers will at minimum support FHIR's read and search operations
 -  Servers **SHALL** supply the MustSupport data elements whenever that data is available
 -  Quality improvement applications **SHALL** recognize and process all MustSupport elements in QI-Core

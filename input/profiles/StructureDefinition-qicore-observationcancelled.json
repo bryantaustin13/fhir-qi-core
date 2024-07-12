@@ -1,6 +1,24 @@
 {
   "resourceType" : "StructureDefinition",
   "id" : "qicore-observationcancelled",
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-primaryCodePath",
+      "valueString": "code"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-isIncluded",
+      "valueBoolean": true
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-isRetrievable",
+      "valueBoolean": true
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-label",
+      "valueString":"ObservationCancelled"
+    }
+  ],
   "url" : "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observationcancelled",
   "version" : "6.0.0",
   "name" : "QICoreObservationCancelled",
@@ -68,7 +86,7 @@
         ],
         "path" : "Observation.extension",
         "sliceName" : "notDoneReason",
-        "short" : "CQF Extension",
+        "short" : "(QI-Core) Extension",
         "min" : 1,
         "max" : "1",
         "type" : [
