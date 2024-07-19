@@ -5,6 +5,9 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cqi"/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-modelInfoSettings">
+    <valueReference value="Parameters/qicore-modelinfosettings"/>
+  </extension>
   <url value="http://hl7.org/fhir/us/qicore/ImplementationGuide/us-qicore"/>
   <version value="7.0.0-ballot"/>
   <name value="QICore"/>
@@ -683,6 +686,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Parameters/qicore-modelinfosettings"/>
+      </reference>
+      <name value="QICore ModelInfo Settings example"/>
+      <description value="QICore ModelInfo Settings Example"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Patient/example"/>
       </reference>
       <name value="Patient example"/>
@@ -925,6 +936,11 @@
     <generation value="markdown"/>
   </page>
   <page>
+    <nameUrl value="qi-elements.html"/>
+    <title value="QI Key Elements"/>
+    <generation value="markdown"/>
+  </page>
+  <page>
     <nameUrl value="changes.html"/>
     <title value="Changes"/>
     <generation value="markdown"/>
@@ -948,7 +964,7 @@
     </parameter>
 <parameter>
   <code value="releaselabel"/>
-  <value value="STU6"/>
+  <value value="STU7"/>
 </parameter>
 <parameter>
   <code value="copyrightyear"/>
