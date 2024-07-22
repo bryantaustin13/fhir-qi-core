@@ -117,12 +117,17 @@
       },
       {
         "id": "ServiceRequest.doNotPerform",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-keyelement",
-            "valueBoolean": true
-          }
-        ],
+        "extension":
+          [{
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason",
+            "valueCodeableConcept": {
+              "coding": [{
+                "system": "http://snomed.info/sct",
+                "code": "416406003",
+                "display": "Procedure discontinued (situation)"
+              }]
+            }
+          }],
         "path": "ServiceRequest.doNotPerform",
         "short": "(QI) True if service/procedure should not be performed",
         "min": 1,
