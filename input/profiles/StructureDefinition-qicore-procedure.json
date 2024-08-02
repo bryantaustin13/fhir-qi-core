@@ -75,7 +75,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/cqf-recorded"
+              "http://hl7.org/fhir/StructureDefinition/event-recorded"
             ]
           }
         ]

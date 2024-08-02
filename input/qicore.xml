@@ -102,10 +102,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/external-extension-cqf-recorded"/>
+        <reference value="StructureDefinition/external-extension-event-recorded"/>
       </reference>
-      <name value="CQF Not Done Recorded"/>
-      <description value="Captures the recorded date the event was not done."/>
+      <name value="Event Recorded"/>
+      <description value="Captures the recorded date of the event."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -960,7 +960,7 @@
 </parameter>
     <parameter>
       <code value="special-url"/>
-      <value value="http://hl7.org/fhir/StructureDefinition/cqf-recorded"/>
+      <value value="http://hl7.org/fhir/StructureDefinition/event-recorded"/>
     </parameter>
 <parameter>
   <code value="releaselabel"/>

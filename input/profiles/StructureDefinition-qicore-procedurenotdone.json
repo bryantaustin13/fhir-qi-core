@@ -78,8 +78,8 @@
             "valueBoolean": true
           }
         ],
-        "path": "Procedure.extension",
-        "sliceName": "recorded",
+        "path": "Procedure.extension.recorded",
+        "sliceName": "procedureRecorded",
         "short": "(QI) When the procedure was first captured in the subject\u0027s record",
         "definition": "The date the occurrence of the procedure was first captured in the record regardless of Procedure.status (potentially after the occurrence of the event).",
         "min": 1,
@@ -88,7 +88,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/cqf-recorded"
+              "http://hl7.org/fhir/StructureDefinition/event-recorded"
             ]
           }
         ]

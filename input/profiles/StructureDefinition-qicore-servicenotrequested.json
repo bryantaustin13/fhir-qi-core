@@ -1,22 +1,22 @@
 {
   "resourceType": "StructureDefinition",
   "id": "qicore-servicenotrequested",
-  "extension" : [
+  "extension": [
     {
-      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-primaryCodePath",
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-primaryCodePath",
       "valueString": "code"
     },
     {
-      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-isIncluded",
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-isIncluded",
       "valueBoolean": true
     },
     {
-      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-isRetrievable",
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-isRetrievable",
       "valueBoolean": true
     },
     {
-      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-label",
-      "valueString":"ServiceNotRequested"
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-modelInfo-label",
+      "valueString": "ServiceNotRequested"
     }
   ],
   "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-servicenotrequested",
@@ -71,28 +71,6 @@
         "mustSupport": false
       },
       {
-        "id": "ServiceRequest.extension:reasonRefused",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-keyelement",
-            "valueBoolean": true
-          }
-        ],
-        "path": "ServiceRequest.extension",
-        "sliceName": "reasonRefused",
-        "short": "(QI) Extension",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason"
-            ]
-          }
-        ]
-      },
-      {
         "id": "ServiceRequest.status",
         "extension": [
           {
@@ -104,30 +82,33 @@
         "short": "(QI) draft | active | on-hold | revoked | completed | entered-in-error | unknown"
       },
       {
-        "id" : "ServiceRequest.intent",
+        "id": "ServiceRequest.intent",
         "extension": [
           {
             "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-keyelement",
             "valueBoolean": true
           }
         ],
-        "path" : "ServiceRequest.intent",
-        "short" : "(QI) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
-        "definition" : "Whether the request is a proposal, plan, an original order or a reflex order."
+        "path": "ServiceRequest.intent",
+        "short": "(QI) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
+        "definition": "Whether the request is a proposal, plan, an original order or a reflex order."
       },
       {
         "id": "ServiceRequest.doNotPerform",
-        "extension":
-          [{
+        "extension": [
+          {
             "url": "http://hl7.org/fhir/StructureDefinition/cqf-doNotPerformReason",
             "valueCodeableConcept": {
-              "coding": [{
-                "system": "http://snomed.info/sct",
-                "code": "416406003",
-                "display": "Procedure discontinued (situation)"
-              }]
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "416406003",
+                  "display": "Procedure discontinued (situation)"
+                }
+              ]
             }
-          }],
+          }
+        ],
         "path": "ServiceRequest.doNotPerform",
         "short": "(QI) True if service/procedure should not be performed",
         "min": 1,
@@ -320,6 +301,21 @@
           }
         ],
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "purpose",
+                  "valueCode": "current"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://hl7.org/fhir/us/qicore/ValueSet/qicore-negation-reason"
+                }
+              ]
+            }
+          ],
           "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
         }
