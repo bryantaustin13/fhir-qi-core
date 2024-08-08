@@ -77,7 +77,7 @@
         ]
       },
       {
-        "id": "Observation.extension:FHIRevent-statusReason",
+        "id": "Observation.extension:FHIReventStatusReason",
         "extension": [
           {
             "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-keyelement",
